@@ -1,0 +1,25 @@
+{
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run-script build && npm run-script test"
+    }
+  },
+  "scripts": {
+    "build": "babel src --out-dir dist && yarn prettier ./dist/* --write",
+    "start": "npm run-script build && node dist",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/polyfill": "^7.7.0",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-react": "^7.7.4",
+    "husky": "^3.1.0",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1"
+  },
+  "dependencies": {
+    "moment": "^2.24.0"
+  }
+}
