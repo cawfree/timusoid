@@ -1,11 +1,12 @@
 {
   "husky": {
     "hooks": {
-      "pre-commit": "npm run-script build && npm run-script test"
+      "pre-commit": "npm run-script pretty && npm run-script build && npm run-script test"
     }
   },
   "scripts": {
-    "build": "babel src --out-dir dist && yarn prettier ./dist/* --write",
+    "pretty": "yarn prettier ./src/* --write",
+    "build": "babel src --out-dir dist && yarn uglifyjs ./dist/* -o ./dist/*",
     "start": "npm run-script build && node dist",
     "test": "jest"
   },
@@ -17,7 +18,8 @@
     "@babel/preset-react": "^7.7.4",
     "husky": "^3.1.0",
     "jest": "^24.9.0",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "uglify-js": "^3.7.3"
   },
   "dependencies": {
     "moment": "^2.24.0"
