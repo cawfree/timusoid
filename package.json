@@ -32,5 +32,13 @@
   },
   "dependencies": {
     "moment": "^2.24.0"
-  }
+  },
+  "name": "timusoid",
+  "version": "0.0.1",
+  "description": "Cyclic representations of time.",
+  "main": "dist",
+  "repository": "https://github.com/cawfree/timusoid",
+  "author": "Alex Thomas (@cawfree) <hello@cawfree.com>",
+  "license": "MIT",
+  "private": false
 }
