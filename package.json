@@ -4,6 +4,15 @@
       "pre-commit": "npm run-script pretty && npm run-script build && npm run-script test"
     }
   },
+  "keywords": [
+    "time",
+    "moment",
+    "node",
+    "network",
+    "neural",
+    "cyclic",
+    "percent"
+  ],
   "scripts": {
     "pretty": "yarn prettier ./src/* --write",
     "build": "babel src --out-dir dist && yarn uglifyjs ./dist/* -o ./dist/*",
